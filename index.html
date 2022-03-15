@@ -23,7 +23,7 @@
     </div>
     <!-- Preloader end -->
     <div class="page">
-        <header class="headerr">
+        <header>
             <!-- <div class="menu"> -->
             <div class="header-image">
                 <img src="img\avatar.jpg" alt="image" style="border-radius:60%;" width="140px" height="170px">
@@ -66,9 +66,12 @@
             </div>
             <!-- </div> -->
         </header>
+
+        <div id="menu" class="fas fa-bars"></div>
+
         <div class="site-main">
             <!-- Home section start -->
-            <section class="home-section section" id="home">
+            <section class="home-section section active" id="home">
                 <div class="mask"></div>
                 <div class="shape-01"></div>
                 <div class="shape-02"></div>
@@ -78,7 +81,8 @@
                     <div class="row align-items-center">
                         <div class="home-content">
                             <h1>Thanh Vinh.</h1>
-                            <h4>Businessman</h4>
+                            <h4>Front-end development</h4>
+                            <!-- <div class="typing animate"></div> -->
                         </div>
                     </div>
                 </div>
@@ -127,7 +131,7 @@
             <!-- About section end -->
 
             <!-- Skill-section start -->
-            <section class="skill-section section" id="skill">
+            <section class="skill-section section active" id="skill">
                 <!-- Skill tabs start -->
                 <div class="container">
                     <div class="section-title-2">
@@ -369,24 +373,32 @@
                     </div>
                     <div class="row">
                         <!-- contact-info-item -->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-phone"></i></div>
-                            <h4>Call me on</h4>
-                            <p>+84 916 982 709 </p>
+                        <div class="contact-info-item">
+                            <div class="contact-info-item-inside">
+                                <div class="icon"><i class="fa fa-phone"></i></div>
+                                <h4>Call me on</h4>
+                                <p>+84 916 982 709 </p>
+                            </div>
                         </div>
                         <!-- contact-info-item end-->
                         <!-- contact-info-item -->
                         <div class="contact-info-item">
-                            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-                            <h4>School</h4>
-                            <p>182 Le Duan street, Nghe An, Viet Nam. </p>
+                            <div class="contact-info-item-inside">
+
+                                <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <h4>School</h4>
+                                <p>182 Le Duan street, Nghe An, VN </p>
+                            </div>
                         </div>
                         <!-- contact-info-item end-->
                         <!-- contact-info-item -->
                         <div class="contact-info-item">
-                            <div class="icon"><i class="fa fa-envelope"></i></div>
-                            <h4>Email</h4>
-                            <p>Nguyendangthanhvinh123@gmail.com</p>
+                            <div class="contact-info-item-inside">
+
+                                <div class="icon"><i class="fa fa-envelope"></i></div>
+                                <h4>Email</h4>
+                                <p>Nguyendangthanhvinh123@gmail.com</p>
+                            </div>
                         </div>
                         <!-- contact-info-item end-->
                     </div>
@@ -433,9 +445,15 @@
                 </div>
             </section>
             <!-- Contacts Section end -->
+            <a href="#home" class="top">
+                <img src="img\MO000130SUPERMAN.webp" width="200px" height="200px" alt="placeholder">
+            </a>
         </div>
 
     </div>
+
+    <!-- jquery cdn links -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="main.js"></script>
 </body>
 

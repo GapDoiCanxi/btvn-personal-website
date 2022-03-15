@@ -1,3 +1,22 @@
+$(document).ready(function() {
+
+    $('#menu').click(function() {
+        $(this).toggleClass('fa-times');
+        $('header').toggleClass('toggle');
+    });
+
+    $(window).on('scroll load', function() {
+        $('#menu').removeClass('fa-times');
+        $('header').removeClass('toggle');
+
+        if ($(window).scrollTop() > 0) {
+            $('.top').show();
+        } else {
+            $('.top').hide();
+        }
+    });
+});
+
 (() => {
     const aboutSection = document.querySelector(".skill-section"),
         tabsContainer = document.querySelector(".skill-tabs");
@@ -14,16 +33,29 @@
     })
 })();
 
-(() => {
-    const sections = document.querySelectorAll(".section");
-    sections.forEach((section) => {
-        if (!section.classList.contains("active")) {
-            section.classList.add("hide");
+// Menu navbar
+
+const nav = document.querySelector(".site-mainmenu"),
+    navList = nav.querySelectorAll("li"),
+    totalNavList = navList.length;
+
+for (let i = 0; i < totalNavList; i++) {
+    const a = navList[i].querySelector("a");
+    a.addEventListener("click", function() {
+        for (let j = 0; j < totalNavList; j++) {
+            navList[j].querySelector("a").classList.remove("active");
         }
+        this.classList.add("active");
     })
-})();
+}
 
-
+// smooth scrolling 
+$('a[href*="#').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: $($(this).attr('href')).offset().top,
+    }, 500, 'linear');
+});
 //  =================Pageloader ==================
 window.addEventListener("load", () => {
     // preloader
